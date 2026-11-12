@@ -28,3 +28,37 @@ ForgeHold Nexus ERP is a lightweight, offline desktop ERP application designed f
 - jpackage (Windows installer)
 
 ## Project Structure
+
+ForgeHold Nexus ERP/
+├── src/Main/Java/
+│ ├── Main.java
+│ ├── DBConnection.java
+│ └── ConnectionTest.java
+├── installer/
+├── pom.xml
+└── README.md
+
+
+## Getting Started
+
+### Prerequisites
+
+- Java Development Kit (JDK) 21 or later
+- Apache Maven
+
+### Build and Run
+
+mvn clean package
+java -jar target/ForgeHold-Nexus-ERP.jar
+
+
+A pre-built Windows installer is also available in the `installer` folder.
+
+## Author
+
+**Usman Ahmad**
+Forgehold Technologies
+
+- GitHub: [github.com/ForgeHoldTech](https://github.com/ForgeHoldTech)
+- Portfolio: [forgeholdtech.github.io](https://forgeholdtech.github.io)
+- Email: uahmad1666@gmail.com
