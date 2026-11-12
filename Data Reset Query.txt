@@ -1,0 +1,30 @@
+BEGIN TRANSACTION;
+
+-- Purane bills aur unke items delete karein
+DELETE FROM SaleItems;
+DELETE FROM Sales;
+
+-- Stock movement history clear karein
+DELETE FROM StockMovements;
+
+-- Products aur customers clear karein
+DELETE FROM Products;
+DELETE FROM Customers;
+
+-- Login ko default par reset karein
+UPDATE Users
+SET Username = 'admin',
+    Password = 'admin123'
+WHERE UserID = 1;
+
+-- Auto-generated IDs ko reset karein, agar sequence entries hain
+DELETE FROM sqlite_sequence
+WHERE name IN (
+    'Products',
+    'Customers',
+    'Sales',
+    'SaleItems',
+    'StockMovements'
+);
+
+COMMIT;
